@@ -1,32 +1,15 @@
 {
     "assets": 
     {
-        "stock_symbols": ["SPY", "TLT", "XOM", "QQQ", "ZM"],
-        "crypto_symbols": ["BTC-USD", "ETH-USD"]
+        "stock_symbols": ["MTN", "DAR", "CLBT", "BLBD"],
+        "crypto_symbols": []
     },
-    "kelly_fraction": 0.15,
-    "max_lookback_years": 5,
-    "annual_risk_free_rate": 0.008,
+    "kelly_fraction": 1,
+    "max_lookback_years": 2,
+    "use_Ledoit_Wolf": false,
+    "annual_risk_free_rate": 0.03,
     "identical_annual_excess_return_rate": 0.03,
-    "use_Ledoit_Wolf": true,
     "max_position_size": 0.99,
-    "expected_annual_excess_return_rates": {
-        "SPY": 0.05,
-        "TLT": 0.02,
-        "XOM": 0.03,
-        "QQQ": 0.07,
-        "BTC-USD": 0.07,
-        "ETH-USD": 0.07,
-        "ZM": 0.05
-    },
-    "capital": 1000000,
-    "position_sizes": {
-        "SPY": 0.40,
-        "TLT": 0.20,
-        "XOM": 0.10,
-        "AAPL": 0.15,
-        "BTC-USD": 0.10,
-        "ETH-USD": 0.05
-    }
+    "capital": 1000000
 }
 

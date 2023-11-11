@@ -8,7 +8,7 @@ import pandas as pd
 import yfinance
 from cvxopt import matrix
 from cvxopt.solvers import qp
-from sklearn.covariance import LedoitWolf
+#from sklearn.covariance import LedoitWolf
 from typing import Dict
 
 def load_config(path:str)->Dict:
@@ -68,6 +68,7 @@ def annual_excess_returns(prices:pd.DataFrame, config:Dict)->pd.DataFrame:
 def annual_covar(excess_returns:pd.DataFrame, config:Dict)->pd.DataFrame:
     "annualized covariance of excess returns"
     if config['use_Ledoit_Wolf'] == True:
+        return
         lw = LedoitWolf().fit(excess_returns.dropna()).covariance_
         ann_covar = pd.DataFrame(lw, columns=excess_returns.columns) * 252
     else:
